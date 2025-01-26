@@ -42,7 +42,7 @@ function Home() {
     wallpaper && trending ?
       <div className='flex overflow-hidden h-screen'>
         <Sidebar bar={bar}  />
-        <div className="lg:w-[77%] 2xl:w-[79%] h-screen overflow-y-auto overflow-x-hidden">
+        <div className="lg:w-[78%] 2xl:w-[80%] h-screen overflow-y-auto overflow-x-hidden">
           <TopNav bar={bar} setBar={setBar} status={'block'}/>
           <Header wallpaper={wallpaper} />
           <div className="p-4 pb-2 flex justify-between items-center relative">
