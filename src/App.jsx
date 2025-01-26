@@ -5,8 +5,8 @@ import Popular from "./components/Popular"
 import Movie from "./components/Movie"
 import TvShows from "./components/TvShows"
 import People from "./components/People"
-import TvDetails from "./components/tvDetails"
-import PersonDetails from "./components/personDetails"
+import TvDetails from "./components/TvDetails"
+import PersonDetails from "./components/PersonDetails"
 import Trailer from "./components/templates/Trailer"
 import Notfound from './components/Notfound'
 import About from './components/About'
