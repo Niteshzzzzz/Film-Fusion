@@ -5,13 +5,13 @@ import Popular from "./components/Popular"
 import Movie from "./components/Movie"
 import TvShows from "./components/TvShows"
 import People from "./components/People"
-import MovieDetails from "./components/movieDetails"
 import TvDetails from "./components/tvDetails"
 import PersonDetails from "./components/personDetails"
 import Trailer from "./components/templates/Trailer"
 import Notfound from './components/Notfound'
 import About from './components/About'
 import ContactUs from "./components/ContactUs"
+import MovieDetails from './components/MovieDetails'
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
         <Route path="/trending" element={<Trending />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/movie" element={<Movie />} />
-        <Route path="/movie/details/:id" element={<MovieDetails />} >
+        <Route path="/movie/details/:id" element={<MovieDetails/>} >
           <Route path="/movie/details/:id/trailer" element={<Trailer />} />
         </Route>
         <Route path="/tv" element={<TvShows />} />
