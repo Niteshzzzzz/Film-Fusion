@@ -10,7 +10,7 @@ function Sidebar({bar}) {
             left: bar
         }} className={`responsive z-50 absolute top-[70px] bg-[#1F1E24] lg:relative lg:w-[22%] 2xl:w-[20%] lg:border-r-2 lg:top-0 border-zinc-400 max-h-screen py-10 duration-300 overflow-y-auto`}>
             <div className="flex gap-2 items-center w-[100%] justify-center">
-                <img src="../public/movieIcon.svg" alt="" className='text-2xl w-[34px]' />
+                <img src="/movieIcon.svg" alt="" className='text-2xl w-[34px]' />
                 <h1 className='text-zinc-100 text-2xl font-bold underline '>FILM-FUSION</h1>
             </div>
             <nav className='flex flex-col px-6 gap-3 text-xl text-zinc-300 w-[100%]'>
