@@ -24,13 +24,13 @@ function TopNav({bar, setBar, status}) {
     }, [query])
 
     return (
-        <div className='z-50 flex w-full justify-center items-center mt-5 relative'>
+        <div className='z-50 flex w-[100%] justify-center items-center mt-10 sm:mt-5 relative'>
             <div className={`${status} text-3xl text-zinc-300 absolute top-2 left-4 lg:hidden hover:text-zinc-100 duration-300`} onClick={() => {bar === '-250px' ? setBar('0px') : setBar('-250px')}}>
             <FontAwesomeIcon icon={faBars} />
             </div>
-            <div className="w-[60%] flex justify-center items-center relative border border-zinc-400 px-4 rounded-full hover:border-blue-500">
+            <div className="w-[65%] flex justify-center items-center relative border border-zinc-400 px-3 sm:px-4 rounded-full hover:border-blue-500">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='text-2xl text-zinc-300' />
-                <input type="text" placeholder='Search Anything...' className='text-xl text-zinc-200 bg-transparent w-full px-4 py-[10px] outline-none border-none' onChange={(e) => setQuery(e.target.value)} value={query} />
+                <input type="text" placeholder='Search Anything...' className='text-1xl sm:text-xl text-zinc-200 bg-transparent w-full px-4 py-[10px] outline-none border-none' onChange={(e) => setQuery(e.target.value)} value={query} />
                 {
                     query && <FontAwesomeIcon icon={faXmark} className='text-2xl text-white absolute right-5 cursor-pointer' onClick={() => setQuery('')} />
                 }

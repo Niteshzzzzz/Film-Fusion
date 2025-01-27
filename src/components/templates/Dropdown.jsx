@@ -2,7 +2,7 @@ import React from 'react'
 
 function Dropdown({ title, category, setFilter }) {
     return (
-        <select name="menu" id="meun-items" className='' defaultValue={0} onChange={(e) => {
+        <select className='md:w-[170px] sm:text-[1rem] sm:w-[140px] md:h-[36px]' name="menu" id="meun-items" defaultValue={0} onChange={(e) => {
             e.preventDefault()
             setFilter(e.target.value)
         }}>

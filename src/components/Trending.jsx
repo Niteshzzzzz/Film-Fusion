@@ -10,7 +10,7 @@ import Cards from './Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 function Trending() {
-    document.title ='FILM-FUSION | Trending'
+    document.title = 'FILM-FUSION | Trending'
     const navigate = useNavigate()
     const [category, setCategory] = useState('all')
     const [duration, setDuration] = useState('day')
@@ -23,8 +23,8 @@ function Trending() {
             const { data } = await axios.get(`trending/${category}/${duration}?page=${page}`)
             if (data.results.length > 0) {
                 setTrending((prevState) => [...prevState, ...data.results])
-                setPage(page+1)  
-            }else{
+                setPage(page + 1)
+            } else {
                 sethasMore(false)
             }
         } catch (error) {
@@ -35,7 +35,7 @@ function Trending() {
     const refreshHandler = () => {
         if (trending.length === 0) {
             getTrending()
-        }else{
+        } else {
             setPage(1)
             setTrending([])
             getTrending()
@@ -47,14 +47,16 @@ function Trending() {
     }, [category, duration])
 
     return (
-        trending.length>0 ?
+        trending.length > 0 ?
             <div className='w-[100vw] h-auto'>
-                <div className=" flex justify-start items-center p-6">
-                    <h1 className='text-3xl text-zinc-100 font-semibold flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Trending</span></h1>
-                    <div className="w-[90%] mt-[-20px]">
-                        <TopNav status={'hidden'} />
+                <div className=" flex justify-between items-center p-6 flex-col lg:flex-row">
+                    <div className="flex justify-between items-center sm:w-[100%] mt-[-30px] sm:mt-0">
+                        <h1 className='hidden text-2xl md:text-3xl text-zinc-100 font-semibold sm:flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Trending</span></h1>
+                        <div className="w-[100vw] sm:w-[100%] mt-[-20px] ">
+                            <TopNav status={'hidden'} />
+                        </div>
                     </div>
-                    <div className="flex justify-between items-center gap-4">
+                    <div className="flex justify-between sm:justify-start lg:justify-end items-center gap-4 w-[100%] lg:w-auto mt-5 lg:mt-0">
                         <Dropdown title={'Category'} category={['all', 'tv', 'movie']} setFilter={setCategory} />
                         <Dropdown title={'Duration'} category={['day', 'week']} setFilter={setDuration} />
                     </div>

@@ -46,7 +46,7 @@ function Home() {
           <TopNav bar={bar} setBar={setBar} status={'block'}/>
           <Header wallpaper={wallpaper} />
           <div className="p-4 pb-2 flex justify-between items-center relative">
-            <h1 className='text-3xl text-zinc-300 font-bold'>Trending</h1>
+            <h1 className='text-xl sm:text-3xl text-zinc-300 font-bold'>Trending</h1>
             <Dropdown title={'Filter'} category={['all', 'tv', 'movie']} setFilter={setFilter} />
           </div>
           <Trending trending={trending} />
