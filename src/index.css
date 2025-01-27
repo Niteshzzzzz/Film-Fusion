@@ -2,30 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 7px;
     height: 7px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: #767474;
     border-radius: 40px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #6556cd;
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     background-color: #D9AFD9;
     background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+}
+
+@media(min-width : 64rem) {
+    .responsive {
+        left: 0 !important;
+    }
 }
 
 /* .container{
@@ -41,11 +48,11 @@ body{
     font-size: 1.4rem;
     text-align: center
 } */
- html{
+html {
     overflow-x: hidden;
- }
+}
 
-select{
+select {
     width: 180px;
     height: 40px;
     outline: none;
@@ -60,7 +67,7 @@ select{
 }
 
 select:focus,
-select:hover{
+select:hover {
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.329);
 }
