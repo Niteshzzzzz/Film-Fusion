@@ -6,7 +6,9 @@ import { faFilesPinwheel } from '@fortawesome/free-brands-svg-icons'
 
 function Sidebar({bar}) {
     return (
-        <div className={`z-50 absolute top-[70px] left-[${bar}] bg-[#1F1E24] lg:left-0 lg:relative lg:w-[22%] 2xl:w-[20%] lg:border-r-2 lg:top-0 border-zinc-400 max-h-screen py-10 duration-300 overflow-y-auto`}>
+        <div style={{
+            left: bar
+        }} className={`z-50 absolute top-[70px] bg-[#1F1E24] lg:left-0 lg:relative lg:w-[22%] 2xl:w-[20%] lg:border-r-2 lg:top-0 border-zinc-400 max-h-screen py-10 duration-300 overflow-y-auto`}>
             <div className="flex gap-2 items-center w-[100%] justify-center">
                 <img src="../public/movieIcon.svg" alt="" className='text-2xl w-[34px]' />
                 <h1 className='text-zinc-100 text-2xl font-bold underline '>FILM-FUSION</h1>
