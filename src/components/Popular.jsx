@@ -10,7 +10,7 @@ import Cards from './Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 function Popular() {
-    document.title ='FILM-FUSION | Popular'
+    document.title = 'FILM-FUSION | Popular'
     const navigate = useNavigate()
     const [category, setCategory] = useState('movie')
     const [popular, setpopular] = useState([])
@@ -22,8 +22,8 @@ function Popular() {
             const { data } = await axios.get(`${category}/popular?page=${page}`)
             if (data.results.length > 0) {
                 setpopular((prevState) => [...prevState, ...data.results])
-                setPage(page+1)  
-            }else{
+                setPage(page + 1)
+            } else {
                 sethasMore(false)
             }
         } catch (error) {
@@ -34,7 +34,7 @@ function Popular() {
     const refreshHandler = () => {
         if (popular.length === 0) {
             getpopular()
-        }else{
+        } else {
             setPage(1)
             setpopular([])
             getpopular()
@@ -46,14 +46,16 @@ function Popular() {
     }, [category])
 
     return (
-        popular.length>0 ?
+        popular.length > 0 ?
             <div className='w-[100vw] h-auto'>
-                <div className=" flex justify-start items-center p-6">
-                    <h1 className='text-3xl text-zinc-100 font-semibold flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Popular</span></h1>
-                    <div className="w-[90%] mt-[-20px]">
-                        <TopNav status={'hidden'} />
+                <div className="flex flex-col md:flex-row justify-start items-center p-6">
+                    <div className="flex justify-start items-center w-full">
+                        <h1 className='hidden text-2xl md:text-3xl text-zinc-100 font-semibold sm:flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Popular</span></h1>
+                        <div className="w-[100vw] sm:w-[100%] mt-[-40px] sm:mt-[-20px]">
+                            <TopNav status={'hidden'} />
+                        </div>
                     </div>
-                    <div className="flex justify-between items-center gap-4">
+                    <div className="flex justify-start w-full md:w-auto items-center mt-4 md:mt-0">
                         <Dropdown title={'Category'} category={['movie', 'tv']} setFilter={setCategory} />
                     </div>
                 </div>
