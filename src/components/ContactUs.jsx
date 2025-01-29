@@ -2,10 +2,10 @@ import React from 'react'
 
 function ContactUs() {
   return (
-<div className="w-screen h-screen bg-gray-800 text-gray-100 px-8 py-12">
-      <div className="flex justify-center items-center"><h1 className='text-5xl text-zinc-200 font-semibold underline'>FILM-FUSION</h1></div>
+<div className="w-screen bg-gray-800 text-gray-100 px-3 sm:px-8 py-4 sm:py-12">
+      <div className="flex justify-center items-center"><h1 className='text-3xl sm:text-5xl text-zinc-200 font-semibold underline'>FILM-FUSION</h1></div>
       <div
-        className="max-w-screen-xl mt-10 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-200 text-gray-900 rounded-lg shadow-lg">
+        className="max-w-screen-xl mt-6 sm:mt-10 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-5 lg:py-16 mx-auto bg-gray-200 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col justify-between">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
