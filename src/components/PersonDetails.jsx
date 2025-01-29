@@ -25,35 +25,35 @@ function PersonDetails() {
   const { info } = useSelector((state) => state.person)
 
   return info ? (
-    <div className='w-screen p-8 bg-[#1f1e24]'>
+    <div className='w-screen py-2 px-1 sm:p-8 bg-[#1f1e24]'>
       <div className='text-3xl text-zinc-100 font-semibold flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='hover:text-[#6556cd] mr-3 ml-1 cursor-pointer hover:bg-zinc-300 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /></div>
-      <div className="my-5 justify-around mt-10 flex gap-x-10 items-center">
-        <div className="">
+      <div className="my-2 sm:my-5 justify-around mt-10 flex flex-col sm:flex-row gap-x-6 md:gap-x-10 items-center">
+        <div className="mt-[-15px] sm:mt-[0px]">
           <img src={info.detail.profile_path ? `https://image.tmdb.org/t/p/original/${info.detail.profile_path}` : noImage} alt="" className='w-[260px] shadow-[8px_20px_32px_2px_rgba(0,0,0, 0.5)] object-cover' />
         </div>
-        <div className="max-w-[60%]">
-          <h1 className='text-5xl font-bold text-zinc-200'>{info.detail.name}</h1>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+        <div className="mt-5 sm:mt-0 max-w-[95%] sm:max-w-[60%]">
+          <h1 className='text-3xl md:text-5xl font-bold text-zinc-200'>{info.detail.name}</h1>
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Know For:</h1>
             <p className=' '>{info.detail.known_for_department}</p>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Gender:</h1>
             <p className=' '>{(info.detail.gender == 1) ? 'Female' : 'Male'}</p>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Birthday:</h1>
             <p className=' '>{info.detail.birthday}</p>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Deathday:</h1>
             <p className=' '>{info.detail.deathday ? info.detail.deathday : 'Still Alive'}</p>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Place of Birth:</h1>
             <p className=' '>{info.detail.place_of_birth}</p>
           </div>
-          <div className="flex items-center gap-2 text-zinc-300 mt-3">
+          <div className="flex items-center gap-2 text-zinc-300 mt-2 md:mt-3">
             <h1 className='text-1xl font-semibold'>Also Known As:</h1>
             <p className=' '>{info.detail.also_known_as.join(', ')}</p>
           </div>
@@ -67,15 +67,15 @@ function PersonDetails() {
         </div>
       </div>
       <hr className='border-none bg-zinc-400 h-[2px] w-[100%] mx-auto my-5' />
-      <div className="flex flex-col items-start justify-center text-zinc-300 mt-3">
+      <div className="flex flex-col px-2 items-start justify-center text-zinc-300 mt-3">
         <h1 className='text-2xl font-semibold'>Biography:</h1>
-        <p className='mt-2'>{info.detail.biography}</p>
+        <p className='mt-2 text-justify'>{info.detail.biography}</p>
       </div>
       <div className="flex flex-col items-start justify-center text-zinc-300 mt-3">
         <h1 className='text-2xl font-semibold'>Work In:</h1>
         <Trending trending={info.combinedCredits.cast} />
       </div>
-      <div className="flex items-center justify-between p-5">
+      <div className="flex items-center justify-between p-4 sm:p-5">
         <h1 className='text-2xl font-semibold text-zinc-300'>Movie & Tv:</h1>
         <Dropdown title={'Filter'} category={['movie', 'tv']} setFilter={setCategory} />
       </div>

@@ -38,7 +38,7 @@ const MovieDetails = () => {
           <h1 className='text-3xl lg:text-4xl font-bold'>{info.detail.name || info.detail.title || info.detail.original_name || info.detail.original_title}</h1>
           {info.detail.vote_average && <div className='flex items-center gap-5 mt-2 lg:mt-3'><div className="bg-yellow-600 w-[5vh] h-[5vh] flex justify-center items-center rounded-full">{(info.detail.vote_average * 10).toFixed()}<sup>%</sup></div>User Score({info.detail.vote_count})</div>}
           <h1 className='mt-2 lg:mt-3 text-1xl font-semibold'>Overview:</h1>
-          <p className='mt-1 text-sm lg:text-md'>{info.detail.overview}</p>
+          <p className='mt-1 text-sm lg:text-md text-justify'>{info.detail.overview}</p>
           <div className="flex gap-10 mt-2 lg:mt-3">
             <p><FontAwesomeIcon icon={faCalendarDays} className='mr-2 text-yellow-400 text-xl' />{info.detail.release_date || 'N/A'}</p>
             <p><FontAwesomeIcon icon={faCompactDisc} className='mr-2 text-yellow-400 text-xl' />Movie</p>
