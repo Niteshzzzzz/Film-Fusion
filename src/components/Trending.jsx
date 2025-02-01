@@ -51,7 +51,7 @@ function Trending() {
             <div className='w-[100vw] h-auto'>
                 <div className=" flex justify-between items-center p-6 flex-col lg:flex-row">
                     <div className="flex justify-between items-center sm:w-[100%] mt-[-30px] sm:mt-0">
-                        <h1 className='hidden text-2xl md:text-3xl text-zinc-100 font-semibold sm:flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Trending</span></h1>
+                        <h1 className='z-10 hidden text-2xl md:text-3xl text-zinc-100 font-semibold sm:flex items-center'><FontAwesomeIcon icon={faArrowLeft} className='mr-3 ml-1 cursor-pointer hover:bg-zinc-700 rounded-full py-1 px-[7px] duration-200 hover:ml-0 hover:mr-4' onClick={() => navigate(-1)} /><span>Trending</span></h1>
                         <div className="w-[100vw] sm:w-[100%] mt-[-20px] ">
                             <TopNav status={'hidden'} />
                         </div>

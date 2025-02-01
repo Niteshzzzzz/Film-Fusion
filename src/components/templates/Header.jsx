@@ -11,7 +11,7 @@ function Header({ wallpaper }) {
             backgroundSize: 'cover'
         }}>
             <h1 className='text-2xl md:text-5xl font-bold'>{wallpaper.name || wallpaper.title || wallpaper.original_name || wallpaper.original_title}</h1>
-            <p className='mt-2 sm:mt-4 w-[90%] sm:w-[80%] text-sm sm:text-base'>{wallpaper.overview.slice(0, 200)}... <Link to={`/${wallpaper.media_type}/details/${wallpaper.id}`} className='text-blue-400'>more.</Link></p>
+            <p className='z-10 mt-2 sm:mt-4 w-[90%] sm:w-[80%] text-sm sm:text-base'>{wallpaper.overview.slice(0, 200)}... <Link to={`/${wallpaper.media_type}/details/${wallpaper.id}`} className='text-blue-400'>more.</Link></p>
             <div className="flex gap-10 mt-2 sm:mt-4">
                 <p className='text-sm sm:text-base'><FontAwesomeIcon icon={faCalendarDays} className='mr-2 text-yellow-400 text-lg sm:text-xl' />{wallpaper.release_date || 'N/A'}</p>
                 <p className='text-sm sm:text-base'><FontAwesomeIcon icon={faCompactDisc} className='mr-2 text-yellow-400 text-lg sm:text-xl' />{wallpaper.media_type.toUpperCase()}</p>

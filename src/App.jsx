@@ -12,29 +12,41 @@ import Notfound from './components/Notfound'
 import About from './components/About'
 import ContactUs from "./components/ContactUs"
 import MovieDetails from './components/MovieDetails'
+// import FluidCursor from "../curserAnimation/Canvas"
+
+'use client';
+import { useEffect } from 'react';
+import useFluidCursor from '../curserAnimation/FluidCursor';
 
 function App() {
 
+  useEffect(() => {
+    useFluidCursor();
+  }, []);
+
   return (
     <div className="w-screen h-screen bg-[#1f1e24]">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/trending" element={<Trending />} />
-        <Route path="/popular" element={<Popular />} />
-        <Route path="/movie" element={<Movie />} />
-        <Route path="/movie/details/:id" element={<MovieDetails/>} >
-          <Route path="/movie/details/:id/trailer" element={<Trailer />} />
-        </Route>
-        <Route path="/tv" element={<TvShows />} />
-        <Route path="/tv/details/:id" element={<TvDetails />} >
-          <Route path="/tv/details/:id/trailer" element={<Trailer />} />
-        </Route>
-        <Route path="/people" element={<People />} />
-        <Route path="/person/details/:id" element={<PersonDetails />} />
-        <Route path="/about/Film-Fusion" element={<About />} /> 
-        <Route path="/contactUS/Film-Fusion" element={<ContactUs />} /> 
-        <Route path="*" element={<Notfound />} /> 
-      </Routes>
+      <div className="fixed top-0 left-0 z-0">
+        <canvas id="fluid" className="w-screen h-screen" />
+      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trending" element={<Trending />} />
+          <Route path="/popular" element={<Popular />} />
+          <Route path="/movie" element={<Movie />} />
+          <Route path="/movie/details/:id" element={<MovieDetails />} >
+            <Route path="/movie/details/:id/trailer" element={<Trailer />} />
+          </Route>
+          <Route path="/tv" element={<TvShows />} />
+          <Route path="/tv/details/:id" element={<TvDetails />} >
+            <Route path="/tv/details/:id/trailer" element={<Trailer />} />
+          </Route>
+          <Route path="/people" element={<People />} />
+          <Route path="/person/details/:id" element={<PersonDetails />} />
+          <Route path="/about/Film-Fusion" element={<About />} />
+          <Route path="/contactUS/Film-Fusion" element={<ContactUs />} />
+          <Route path="*" element={<Notfound />} />
+        </Routes>
     </div>
   )
 }

@@ -511,7 +511,7 @@ function ContactUs() {
             </svg>
           </div>
         </div>
-        <div className="">
+        <div className="z-10">
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span>
             <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-blue-400 focus:shadow-outline"
