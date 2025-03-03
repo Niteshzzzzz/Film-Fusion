@@ -27,7 +27,7 @@ function Sidebar({bar}) {
                 <h1 className='text-white font-semibold text-xl mt-5 lg:mt-10 mb-2 lg:mb-5'>Website Information</h1>
                 <Link to='/about/Film-Fusion' className='px-3 lg:px-5 py-2 lg:py-3 hover:bg-[#6556CD] hover:text-white rounded-lg duration-300'>       
                 <FontAwesomeIcon icon={faCircleInfo} className='mr-2'/>About Us</Link>
-                <Link to='/contactUS/Film-Fusion' className='px-3 lg:px-5 py-2 lg:py-3 hover:bg-[#6556CD] hover:text-white rounded-lg duration-300'><FontAwesomeIcon icon={faPhone} className='mr-2'/>Contect Us</Link>
+                <Link to='/contactUS/Film-Fusion' className='px-3 lg:px-5 py-2 lg:py-3 hover:bg-[#6556CD] hover:text-white rounded-lg duration-300'><FontAwesomeIcon icon={faPhone} className='mr-2'/>Contact Us</Link>
             </nav>
         </div>
     )
